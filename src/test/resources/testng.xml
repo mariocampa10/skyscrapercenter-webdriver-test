@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SkyScraperCenterTest">
+    <listeners>
+        <listener class-name="utils.Listener"></listener>
+    </listeners>
+
+    <test name="Building Table tests">
+        <classes>
+            <class name="test.BuildingsTableTest"/>
+        </classes>
+    </test>
+</suite>
