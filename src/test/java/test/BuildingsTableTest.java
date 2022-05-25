@@ -13,6 +13,7 @@ public class BuildingsTableTest extends BaseTest {
 
     //Test data
     private static final String BUILDING_NAME = "Lotte World Tower";
+    private static final String BUILDING_CITY = "Seoul";
     private static final String BUILDING_FLOORS = "123";
     private static final int NUMBER_RESULTS = 100;
 
@@ -32,7 +33,7 @@ public class BuildingsTableTest extends BaseTest {
 
     @Test
     public void testBuildingFloors() {
-        tallestBuildingsPage.hasBuildingWithFloors(BUILDING_NAME, BUILDING_FLOORS);
+        tallestBuildingsPage.hasBuildingWithFloors(BUILDING_NAME, BUILDING_CITY, BUILDING_FLOORS);
     }
 
     @Test

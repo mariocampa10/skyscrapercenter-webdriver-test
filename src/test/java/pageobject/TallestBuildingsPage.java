@@ -41,12 +41,12 @@ public class TallestBuildingsPage extends BasePage {
         assertThat(rowBuildings.size(), equalTo(number));
     }
 
-    public void hasBuildingWithFloors(String building, String floors) {
+    public void hasBuildingWithFloors(String building, String city, String floors) {
         waitForPageLoaded();
         List<WebElement> rowBuildings = tableResults.findElements(By.xpath("tbody/tr"));
         boolean found = false;
         for (int i = 0; i < rowBuildings.size(); i++) {
-            if (rowBuildings.get(i).findElement(By.xpath("td[2]")).getText().equals(building)) {
+            if (rowBuildings.get(i).findElement(By.xpath("td[2]")).getText().equals(building) && rowBuildings.get(i).findElement(By.xpath("td[3]")).getText().equals(city)) {
                 found = true;
                 assertThat(rowBuildings.get(i).findElement(By.xpath("td[7]")).getText(), equalTo(floors));
                 break;
