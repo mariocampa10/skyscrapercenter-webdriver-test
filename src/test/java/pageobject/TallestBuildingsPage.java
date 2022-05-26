@@ -27,7 +27,7 @@ public class TallestBuildingsPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void navigateToLandingPage() {
+    public void navigateToTallestBuildingsPage() {
         driver.get(Constants.URL_BASE);
     }
 
@@ -35,7 +35,7 @@ public class TallestBuildingsPage extends BasePage {
         selectByValue(selectBuildingType, "tallest100-completed");
     }
 
-    public void hasNumberResults(int number) {
+    public void hasResultsNumber(int number) {
         waitForPageLoaded();
         List<WebElement> rowBuildings = tableResults.findElements(By.xpath("tbody/tr"));
         assertThat(rowBuildings.size(), equalTo(number));

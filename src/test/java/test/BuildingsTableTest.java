@@ -22,13 +22,13 @@ public class BuildingsTableTest extends BaseTest {
     public void setUp() {
         driver = DriverFactory.getDriver();
         tallestBuildingsPage = new TallestBuildingsPage(driver);
-        tallestBuildingsPage.navigateToLandingPage();
+        tallestBuildingsPage.navigateToTallestBuildingsPage();
         tallestBuildingsPage.setBuildingTypeCompleted();
     }
 
     @Test
     public void testNumberOfBuildings() {
-        tallestBuildingsPage.hasNumberResults(NUMBER_RESULTS);
+        tallestBuildingsPage.hasResultsNumber(NUMBER_RESULTS);
     }
 
     @Test

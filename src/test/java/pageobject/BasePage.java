@@ -13,10 +13,11 @@ public class BasePage {
     protected WebDriver driver;
     private final int timeout = 30;
 
-    public void selectByValue(WebElement webElement, String text) {
+
+    public void selectByValue(WebElement webElement, String value) {
         waitForVisibility(webElement);
         Select select = new Select(webElement);
-        select.selectByValue(text);
+        select.selectByValue(value);
         waitForPageLoaded();
     }
 
